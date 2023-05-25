@@ -1,0 +1,26 @@
+{
+  "name": "node-test-reporters-json-coverage",
+  "version": "1.0.0",
+  "description": "JSON Coverage Reporter for Node v20 test runner",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test --experimental-test-coverage --test-reporter=spec --test-reporter=./index.js --test-reporter-destination=stdout --test-reporter-destination=summary.json index.spec.js",
+    "test-color": "node --test --experimental-test-coverage --test-reporter=spec --test-reporter=./colorized.js --test-reporter-destination=stdout --test-reporter-destination=stdout index.spec.js"
+  },
+  "keywords": [
+    "node",
+    "node:test",
+    "test-reporter",
+    "coverage"
+  ],
+  "author": "Michael Feher",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
